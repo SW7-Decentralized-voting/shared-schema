@@ -8,28 +8,15 @@ const CandidateSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	email: {
-		type: String,
-		unique: true,
-	},
-	phone: {
-		type: String,
-		unique: true,
-	},
-	address: {
-		type: String,
-	},
-	resume: {
-		type: String,
-	},
-	job: {
+	partyId: {
 		type: Schema.Types.ObjectId,
-		ref: 'Job',
+		ref: 'Party',
+		required: true,
 	},
-	status: {
-		type: String,
-		enum: ['pending', 'approved', 'rejected'],
-		default: 'pending',
+	nominationDistrictId: {
+		type: Schema.Types.ObjectId,
+		ref: 'NominationDistrict',
+		required: true,
 	},
 });
 
