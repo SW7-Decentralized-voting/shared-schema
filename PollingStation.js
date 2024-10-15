@@ -11,7 +11,7 @@ const PollingStationSchema = new Schema({
 		ref: "NominationDistrict",
 		required: true,
 	},
-});
+}, { timestamps: true });
 
 const PollingStation = mongoose.model("PollingStation", PollingStationSchema);
 

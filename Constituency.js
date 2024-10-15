@@ -6,7 +6,7 @@ const ConstituencySchema = new Schema({
 		type: String,
 		required: true,
 	},
-});
+}, { timestamps: true });
 
 const Constituency = mongoose.model("Constituency", ConstituencySchema);
 

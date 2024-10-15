@@ -18,7 +18,7 @@ const CandidateSchema = new Schema({
 		ref: 'NominationDistrict',
 		required: true,
 	},
-});
+}, { timestamps: true });
 
 const Candidate = mongoose.model('Candidate', CandidateSchema);
 

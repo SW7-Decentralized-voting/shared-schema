@@ -10,7 +10,7 @@ const PartySchema = new Schema({
 		type: String,
 		required: true,
 	},
-});
+}, { timestamps: true });
 
 const Party = mongoose.model("Party", PartySchema);
 

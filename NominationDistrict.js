@@ -11,7 +11,7 @@ const NominationDistrictSchema = new Schema({
 		ref: "Constituency",
 		required: true,
 	},
-});
+}, { timestamps: true });
 
 const NominationDistrict = mongoose.model("NominationDistrict", NominationDistrictSchema);
 
