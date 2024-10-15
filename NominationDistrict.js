@@ -6,7 +6,7 @@ const NominationDistrictSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	constituencyId: {
+	constituency: {
 		type: Schema.Types.ObjectId,
 		ref: "Constituency",
 		required: true,

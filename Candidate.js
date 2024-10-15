@@ -8,12 +8,12 @@ const CandidateSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	partyId: {
+	party: {
 		type: Schema.Types.ObjectId,
 		ref: 'Party',
 		required: true,
 	},
-	nominationDistrictId: {
+	nominationDistrict: {
 		type: Schema.Types.ObjectId,
 		ref: 'NominationDistrict',
 		required: true,
