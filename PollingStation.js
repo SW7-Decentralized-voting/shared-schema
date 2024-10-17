@@ -6,6 +6,10 @@ const PollingStationSchema = new Schema({
 		type: String,
 		required: true,
 	},
+	expectedVoters: {
+		type: Number,
+		required: true,
+	},
 	nominationDistrict: {
 		type: Schema.Types.ObjectId,
 		ref: "NominationDistrict",
