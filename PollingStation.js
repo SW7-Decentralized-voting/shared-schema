@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { Schema } from "mongoose";
+import mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 
 const PollingStationSchema = new Schema({
 	name: {
@@ -12,11 +12,11 @@ const PollingStationSchema = new Schema({
 	},
 	nominationDistrict: {
 		type: Schema.Types.ObjectId,
-		ref: "NominationDistrict",
+		ref: 'NominationDistrict',
 		required: true,
 	},
 }, { timestamps: true });
 
-const PollingStation = mongoose.model("PollingStation", PollingStationSchema);
+const PollingStation = mongoose.model('PollingStation', PollingStationSchema);
 
 export default PollingStation;

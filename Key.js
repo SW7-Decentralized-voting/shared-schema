@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { Schema } from "mongoose";
+import mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 
 const KeySchema = new Schema({
 	keyHash: {
@@ -8,11 +8,11 @@ const KeySchema = new Schema({
 	},
 	pollingStation: {
 		type: Schema.Types.ObjectId,
-		ref: "PollintStation",
+		ref: 'PollintStation',
 		required: true,
 	},
 }, { timestamps: true });
 
-const PollingStation = mongoose.model("Key", KeySchema);
+const PollingStation = mongoose.model('Key', KeySchema);
 
 export default PollingStation;

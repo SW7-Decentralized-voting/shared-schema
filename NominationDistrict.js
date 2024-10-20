@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { Schema } from "mongoose";
+import mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 
 const NominationDistrictSchema = new Schema({
 	name: {
@@ -8,11 +8,11 @@ const NominationDistrictSchema = new Schema({
 	},
 	constituency: {
 		type: Schema.Types.ObjectId,
-		ref: "Constituency",
+		ref: 'Constituency',
 		required: true,
 	},
 }, { timestamps: true });
 
-const NominationDistrict = mongoose.model("NominationDistrict", NominationDistrictSchema);
+const NominationDistrict = mongoose.model('NominationDistrict', NominationDistrictSchema);
 
 export default NominationDistrict;

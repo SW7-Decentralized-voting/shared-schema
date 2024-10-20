@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { Schema } from "mongoose";
+import mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 
 const ConstituencySchema = new Schema({
 	name: {
@@ -8,6 +8,6 @@ const ConstituencySchema = new Schema({
 	},
 }, { timestamps: true });
 
-const Constituency = mongoose.model("Constituency", ConstituencySchema);
+const Constituency = mongoose.model('Constituency', ConstituencySchema);
 
 export default Constituency;
