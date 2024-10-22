@@ -9,6 +9,6 @@ export default [
 	},
 	{
 		validator: (name) => /^[a-zA-Z0-9\- ]+$/.test(name),
-		message: (name) => `Name must only contain letters, numbers, hyphens, and spaces. Received: ${name.toString()}`,
+		message: (name) => `Name must only contain letters, numbers, hyphens, and spaces. Received: ${name.value}`,
 	}
 ]
