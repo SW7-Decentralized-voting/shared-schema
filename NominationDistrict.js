@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
 import { Schema } from 'mongoose';
+import nameValidator from './validators/name.js';
 
 const NominationDistrictSchema = new Schema({
 	name: {
 		type: String,
 		required: true,
+		validate: nameValidator,
 	},
 	constituency: {
 		type: Schema.Types.ObjectId,

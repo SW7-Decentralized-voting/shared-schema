@@ -2,11 +2,13 @@
 
 import mongoose from 'mongoose';
 import { Schema } from 'mongoose';
+import nameValidator from './validators/name.js';
 
 const CandidateSchema = new Schema({
 	name: {
 		type: String,
 		required: true,
+		validate: nameValidator,
 	},
 	party: {
 		type: Schema.Types.ObjectId,
