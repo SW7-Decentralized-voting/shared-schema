@@ -1,6 +1,6 @@
 export default [
 	{
-		validator: (list) => /^[A-Z]$/.test(list),
+		validator: (list) => /^[A-ZÆØÅ]$/.test(list),
 		message: 'List must be a one letter (uppercase) string.',
 	}
 ]
