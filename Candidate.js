@@ -3,7 +3,6 @@
 import mongoose from 'mongoose';
 import { Schema } from 'mongoose';
 import nameValidator from './validators/name.js';
-import Counter from './Counter.js';
 
 const CandidateSchema = new Schema({
 	name: {
@@ -21,29 +20,7 @@ const CandidateSchema = new Schema({
 		ref: 'NominationDistrict',
 		required: true,
 	},
-	hmIndex: {
-        type: Number,
-        unique: true,
-    },
 }, { timestamps: true });
-
-CandidateSchema.pre('save', async function(next) {
-    if (this.isNew) {
-        try {
-            const counter = await Counter.findByIdAndUpdate(
-                { _id: 'candidateId' },
-                { $inc: { seq: 1 } },
-                { new: true, upsert: true}
-            );
-            this.hmIndex = counter.seq;
-            next();
-        } catch (error) {
-            next(error);
-        }
-    } else {
-        next();
-    }
-});
 
 const Candidate = mongoose.model('Candidate', CandidateSchema);
 
