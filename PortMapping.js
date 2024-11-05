@@ -1,6 +1,5 @@
-import { ObjectId } from "bson";
 import mongoose from "mongoose";
-import { Schema, ObjectId } from "mongoose";
+import { Schema } from "mongoose";
 
 const PortMappingSchema = new Schema({
 	port: {
@@ -9,7 +8,7 @@ const PortMappingSchema = new Schema({
 		required: true,
 	},
 	pollingStation: {
-		type: ObjectId,
+		type: Schema.Types.ObjectId,
 		ref: "PollingStation",
 		required: true,
 	}
