@@ -6,6 +6,10 @@ const KeySchema = new Schema({
 		type: String,
 		required: true,
 	},
+	isUsed: {
+		type: Boolean,
+		default: false,
+	},
 	pollingStation: {
 		type: Schema.Types.ObjectId,
 		ref: 'PollintStation',
