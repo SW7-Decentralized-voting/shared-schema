@@ -9,6 +9,7 @@ const KeySchema = new Schema({
 	isUsed: {
 		type: Boolean,
 		default: false,
+		required: true,
 	},
 	pollingStation: {
 		type: Schema.Types.ObjectId,
