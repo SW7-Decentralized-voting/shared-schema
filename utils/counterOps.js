@@ -15,6 +15,7 @@ const resetCounter = async (collectionName, startValue = -1) => {
         { seq: startValue }, // Set seq to the desired value
         { new: true }
     );
+    return result;
 };
 
 export { getNextSequenceValue, resetCounter };
