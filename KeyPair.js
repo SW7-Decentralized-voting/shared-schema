@@ -2,14 +2,24 @@ import mongoose from 'mongoose';
 import { Schema } from 'mongoose';
 
 const KeyPairSchema = new Schema({
-	publicKey: {
+	lambda: {
 		type: String,
 		required: true,
 	},
-	privateKey: {
+	mu: {
 		type: String,
 		required: true,
-	}
+	},
+	publicKey: {
+		n: {
+			type: String,
+			required: true,
+		},
+		g: {
+			type: String,
+			required: true,
+		},
+	},
 }, { timestamps: true });
 
 const KeyPair = mongoose.model('key-pair', KeyPairSchema);
